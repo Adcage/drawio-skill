@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DrawIO Preflight Report",
+  "type": "object",
+  "required": ["ok", "providers", "policy", "next_actions"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "providers": {
+      "type": "object",
+      "properties": {
+        "local-cli": {
+          "type": "object",
+          "properties": {
+            "available": {"type": "boolean"},
+            "is_remote": {"type": "boolean"}
+          },
+          "required": ["available", "is_remote"]
+        },
+        "user-node": {
+          "type": "object",
+          "properties": {
+            "available": {"type": "boolean"},
+            "is_remote": {"type": "boolean"}
+          },
+          "required": ["available", "is_remote"]
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "allow_remote": {"const": false},
+        "require_admin": {"const": false}
+      },
+      "required": ["allow_remote", "require_admin"]
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
