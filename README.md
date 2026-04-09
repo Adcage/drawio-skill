@@ -54,7 +54,15 @@
 
 ```
 drawio-skill/
-├── drawio/                          # 旧版图表文档
+├── SKILL.md                         # 技能总览和决策树
+├── README.md                        # 使用说明
+├── LICENSE
+├── base/
+│   ├── drawio-basics.md
+│   ├── drawio-export-cross-platform.md
+│   ├── drawio-environment-setup.md
+│   └── drawio-auto-fix.md
+├── diagrams/
 │   ├── drawio-activity-diagram.md
 │   ├── drawio-agents.md
 │   ├── drawio-bce.md
@@ -64,23 +72,14 @@ drawio-skill/
 │   ├── drawio-sequence-diagram.md
 │   ├── drawio-use-case.md
 │   └── drawio-vopc.md
-│
-├── drawio-diagram/                  # 主要技能文档
-│   ├── base/
-│   │   └── drawio-basics.md        # DrawIO 基础知识
-│   ├── diagrams/
-│   │   ├── drawio-activity-diagram.md    # 活动图规范
-│   │   ├── drawio-agents.md              # 通用图表规范
-│   │   ├── drawio-bce.md                 # BCE 图规范
-│   │   ├── drawio-class-diagram.md       # 类图规范
-│   │   ├── drawio-communication.md       # 通信图规范
-│   │   ├── drawio-pkg.md                 # 包图规范
-│   │   ├── drawio-sequence-diagram.md    # 时序图规范
-│   │   ├── drawio-use-case.md            # 用例图规范
-│   │   └── drawio-vopc.md                # VOPC 图规范
-│   └── SKILL.md                     # 技能总览和决策树
-│
-└── README.md                        # 本文件
+├── scripts/
+│   ├── drawio_preflight.py
+│   ├── drawio_bootstrap.py
+│   ├── drawio_export.py
+│   ├── drawio_layout_check.py
+│   └── drawio_auto_fix.py
+└── examples/
+    └── minimal.drawio
 ```
 
 ## 🚀 快速开始
@@ -186,7 +185,7 @@ DrawIO 基础知识，包含：
 
 **步骤**：
 
-1. 识别关键词"时序图" → 使用 `drawio-sequence-diagram.md`
+1. 识别关键词"时序图" → 使用 `diagrams/drawio-sequence-diagram.md`
 2. 识别参与者：用户、前端、后端、数据库
 3. 识别消息流：输入账号密码 → 发送请求 → 验证 → 返回结果
 4. 应用时序图规范生成 XML
@@ -199,7 +198,7 @@ DrawIO 基础知识，包含：
 
 **步骤**：
 
-1. 识别关键词"用例图" → 使用 `drawio-use-case.md`
+1. 识别关键词"用例图" → 使用 `diagrams/drawio-use-case.md`
 2. 识别参与者：用户、管理员
 3. 识别用例：浏览商品、下单、支付、商品管理、订单管理
 4. 建立关联关系
@@ -238,8 +237,3 @@ DrawIO 基础知识，包含：
 ## 📮 联系方式
 
 如有问题或建议，欢迎通过 GitHub Issues 联系。
-
----
-
-**版本**: 1.0.0  
-**最后更新**: 2024-12-23
