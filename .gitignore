@@ -1,0 +1,29 @@
+# Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python tooling cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local temp artifacts
+.drawio-preflight.json
+
+# Generated export outputs
+outputs/
+
+# Optional: keep submission as pure skill package
+tests/
+docs/plans/
+
+# OS junk files
+.DS_Store
+Thumbs.db
